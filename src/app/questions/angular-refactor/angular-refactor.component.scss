@@ -1,0 +1,48 @@
+:host {
+  display: block;
+  padding: 1rem 2rem;
+
+  ul.instructions {
+    margin-bottom: 2rem;
+    li {
+      margin: 0.5rem 0;
+    }
+  }
+  .container {
+    border: 2px dashed black;
+    padding: 1rem 2rem;
+    background-color: white;
+    margin-bottom: 2rem;
+    h1 {
+      margin-top: 0rem;
+    }
+  }
+
+  // REFACTOR THE CODE BELOW
+  ul.appointments {
+    list-style: none;
+    padding-left: 0;    
+    app-appt {
+      .service {
+        width: 160px;
+        font-size: 1.5rem;
+        top: 2px;
+      }
+      span {
+        position: relative;
+        top: -2px;
+        display: inline-block;
+        line-height: 1.5;
+        .date {
+          top: 0px;
+          margin-right: 2rem;
+        }
+      }
+      .install {
+        font-size: 1.5rem;
+        top: 0;
+        width: 160px;
+      }      
+    }
+  }
+}

@@ -1,0 +1,79 @@
+<!-- DO NOT MODIFY THIS CODE, EDIT AT THE BOTTOM -->
+
+<h2>{{ questionNumber }}. SCSS and Lists</h2>
+<ul class="instructions">
+  <li>Starting with the given markup, code the layout shown below.</li>
+  <li>There can be no instances of A or C but always at least 1 of B.</li>
+  <li>Demonstrate that your code works for all data scenarios.</li>
+</ul>
+<table class="mockup">
+  <tr>
+    <td></td>
+    <td class="measurement">
+      <div>&uarr;</div>
+      <div>48px</div>
+      <div>&darr;</div>
+    </td>
+    <td><b>Container</b></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td class="measurement">&larr; 32px &rarr;</td>
+    <td colspan="3" class="component">
+      <div>Component A</div>
+      <div><i>0 or more...</i></div>
+    </td>
+    <td class="measurement">&larr; 32px &rarr;</td>
+  </tr>
+  <tr>
+    <td colspan="5" class="measurement">
+      <div>&uarr;</div>
+      <div>16px</div>
+      <div>&darr;</div>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td colspan="3" class="component">
+      <div>Component B</div>
+      <div><i>1 or more...</i></div>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="5" class="measurement">
+      <div>&uarr;</div>
+      <div>16px</div>
+      <div>&darr;</div>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td colspan="3" class="component">
+      <div>Component C</div>
+      <div><i>0 or more...</i></div>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="5" class="measurement">
+      <div>&uarr;</div>
+      <div>32px</div>
+      <div>&darr;</div>
+    </td>
+  </tr>
+</table>
+<p style="color: red; text-align: center"><i>*Dimensions are not to scale</i></p>
+<hr />
+
+<!-------------------------- EDIT THE CODE BELOW --------------------------------->
+<p>YOUR CODE HERE</p>
+<div>
+  <!-- 0 or more -->
+  <div *ngFor="let a of componentListA$ | async">{{ a }}</div>
+  <!-- 1 or more -->
+  <div *ngFor="let b of componentListB$ | async">{{ b }}</div>
+  <!-- 0 or more -->
+  <div *ngFor="let c of componentListC$ | async">{{ c }}</div>
+</div>

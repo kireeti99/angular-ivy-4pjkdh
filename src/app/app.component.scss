@@ -1,0 +1,26 @@
+//////////////////// DO NOT MODIFY THIS FILE /////////////////////
+:host {
+  display: block;
+
+  .frame {
+    max-width: 840px;
+    margin: 0 auto;
+
+    h1 {
+      margin: 0;
+      padding: 2rem;
+      background-color: #9af;
+    }
+    hr {
+      height: 2px;
+      background-color: #234;
+      margin: 0rem;
+    }
+    app-angular-data, app-css-flexbox {
+      background-color: #def;
+    }
+    app-angular-refactor, app-css-list {
+      background-color: #cdf;
+    }
+  }
+}

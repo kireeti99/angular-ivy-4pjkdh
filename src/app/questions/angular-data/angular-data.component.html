@@ -1,0 +1,55 @@
+<!-- DO NOT EDIT -->
+
+<h2>{{ questionNumber }}. Angular Large Data</h2>
+<p>Consider the following scenario:</p>
+<ul class="instructions">
+  <li>You have a database with a large (100k+) number of vehicles.</li>
+  <li>An API returns a JSON formatted list of all vehicles.</li>
+  <li>The information is not time-sensitive and does not get "stale".</li>
+</ul>
+<p>
+  Discuss how you would structure an app using Angular patterns to provide the
+  following views:
+</p>
+<div class="views">
+  <div>
+    <div>Cars</div>
+    <div>Trucks</div>
+    <div>SUVs</div>
+  </div>
+  <div>
+    <div>Vehicles A-Z</div>
+    <div>Vehicles by $</div>
+  </div>
+</div>
+<button (click)="toggleHints()">Hints</button>
+<ul *ngIf="showHints" class="instructions">
+  <li>The API should be called only once.</li>
+  <li>What things need to happen?</li>
+  <ul>
+    <li>Request to API</li>
+    <li>Caching data</li>
+    <li>Sorting</li>
+    <li>Displaying in views</li>
+  </ul>
+  <li>Where do these things happen?</li>
+  <ul>
+    <li>Service or effect</li>
+    <li>ReplaySubject, Local storage, NgRx Store</li>
+    <li>Service, reducer, component</li>
+    <li>Component template</li>
+  </ul>
+  <li>How many / what components are needed?</li>
+  <ul>
+    <li>Component for each page</li>
+    <li>Component for each "bucket" or can 1 component do all of it?</li>
+  </ul>
+</ul>
+<button (click)="toggleExtraCredit()">Extra Credit</button>
+<ul *ngIf="showExtraCredit" class="instructions">
+  <li>What if the number of vehicles is an order of magnitude greater?</li>
+  <li>What if the information on each vehicle is very large? (e.g. 1MB)</li>
+  <li>What if the response is very slow? (e.g. 10 seconds)</li>
+  <li>What if the types of vehicles are dynamic?</li>
+  <li>What if the views required are dynamic?</li>
+</ul>

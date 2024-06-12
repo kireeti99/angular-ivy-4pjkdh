@@ -1,0 +1,7 @@
+<span class="circle" 
+  [class.alert]="ico === 'alert'"
+  [class.check]="ico === 'check'"
+>
+  <span *ngIf="ico === 'alert'">!</span>
+  <span *ngIf="ico === 'check'">&#10003;</span>
+</span>

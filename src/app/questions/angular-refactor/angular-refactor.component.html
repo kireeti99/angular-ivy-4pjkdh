@@ -1,0 +1,39 @@
+<!-- DO NOT EDIT -->
+<h2>{{ questionNumber }}. Angular Refactor</h2>
+<ul class="instructions">
+  <li>Refactor the code below.</li>
+  <li>Modify the TS, HTML, SCSS and model as necessary.</li>
+</ul>
+
+<!-- REFACTOR THE CODE BELOW -->
+<div class="container">
+  <h1>Appointments</h1>
+  <ul class="appointments">
+    <li *ngFor="let appt of appts">
+      <app-appt *ngIf="!appt.warning">
+        <app-spc-icon [ico]="'check'"></app-spc-icon>
+        <span class="install">
+          {{ appt.type }}
+        </span>
+        <span class="date">
+          {{ appt.date }}
+        </span>
+        <span>
+          {{ appt.time }}
+        </span>
+      </app-appt>
+      <app-appt *ngIf="appt.warning">
+        <app-spc-icon [ico]="'alert'" dark></app-spc-icon>
+        <span class="service">
+          {{ appt.type }}
+        </span>
+        <span class="date">
+          {{ appt.date }}
+        </span>
+        <span>
+          {{ appt.time }}
+        </span>
+      </app-appt>
+    </li>
+  </ul>
+</div>
